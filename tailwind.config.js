@@ -1,34 +1,33 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
     darkMode: ["class"],
-    content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  theme: {
-  	extend: {
-  		animation: {
-  			'gradient-x': 'gradient-x 15s ease infinite'
-  		},
-  		keyframes: {
-  			'gradient-x': {
-  				'0%, 100%': {
-  					'background-size': '200% 200%',
-  					'background-position': 'left center'
-  				},
-  				'50%': {
-  					'background-size': '200% 200%',
-  					'background-position': 'right center'
-  				}
-  			}
-  		},
-  		borderRadius: {
-  			lg: 'var(--radius)',
-  			md: 'calc(var(--radius) - 2px)',
-  			sm: 'calc(var(--radius) - 4px)'
-  		},
-  		colors: {}
-  	}
-  },
-  plugins: [require("tailwindcss-animate")],
-}
+    content: ["./index.html", "./src/**/*.{ts,tsx,js,jsx}"],
+	theme: {
+    	extend: {
+    		keyframes: {
+    			'accordion-down': {
+    				from: {
+    					height: '0'
+    				},
+    				to: {
+    					height: 'var(--radix-accordion-content-height)'
+    				}
+    			},
+    			'accordion-up': {
+    				from: {
+    					height: 'var(--radix-accordion-content-height)'
+    				},
+    				to: {
+    					height: '0'
+    				}
+    			}
+    		},
+    		animation: {
+    			'accordion-down': 'accordion-down 0.2s ease-out',
+    			'accordion-up': 'accordion-up 0.2s ease-out'
+    		}
+    	}
+    },
+	plugins: [],
+  }
+  

@@ -89,9 +89,8 @@ const Home = () => {
   return (
     <div className="bg-white">
       <div className="relative overflow-hidden">
-        {/* Enhanced Background Elements */}
         <div className="absolute inset-0">
-          {/* Diagonal Lines */}
+          
           <div className="absolute inset-0" style={{
             backgroundImage: `linear-gradient(45deg, #f1f5f9 25%, transparent 25%, transparent 75%, #f1f5f9 75%, #f1f5f9), 
                              linear-gradient(45deg, #f1f5f9 25%, transparent 25%, transparent 75%, #f1f5f9 75%, #f1f5f9)`,
@@ -100,22 +99,18 @@ const Home = () => {
             opacity: '0.4'
           }}></div>
 
-          {/* Gradient Orbs */}
+
           <div className="absolute top-0 right-0 -mr-40 w-96 h-96 bg-gradient-to-r from-blue-200 to-blue-100 rounded-full filter blur-3xl opacity-60 animate-pulse"></div>
           <div className="absolute bottom-0 left-0 -ml-40 w-96 h-96 bg-gradient-to-r from-indigo-200 to-purple-100 rounded-full filter blur-3xl opacity-60 animate-pulse" style={{ animationDelay: '1s' }}></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full filter blur-3xl opacity-40 animate-pulse" style={{ animationDelay: '2s' }}></div>
 
-          {/* Floating Shapes */}
+
           <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 50%)' }}></div>
         </div>
 
         <div className="relative">
-          {/* Same content as before */}
+          
           <div className="max-w-7xl mx-auto px-6">
-            {/* Top Bar */}
-    
-
-            {/* Hero Content */}
             <div className="py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="relative">
                 <div className="absolute -left-4 -top-4 w-72 h-72 bg-gradient-to-r from-blue-100 to-indigo-100 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
@@ -155,7 +150,6 @@ const Home = () => {
                 </div>
               </div>
 
-              {/* Stats Grid with Glass Effect */}
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-6 rounded-2xl backdrop-blur-sm bg-white/40 border border-white/60 shadow-lg">
                   <div className="text-4xl font-bold text-blue-600">300+</div>
@@ -176,7 +170,6 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Bottom Recognition Bar */}
             <div className="border-t border-gray-200/80 backdrop-blur-sm py-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="flex items-center justify-center">

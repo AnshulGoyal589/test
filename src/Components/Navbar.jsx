@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <div className="relative">
-      {/* Top Banner */}
+      
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-center text-sm font-medium">
@@ -51,7 +51,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Main Navbar */}
+
       <nav className="bg-white shadow-lg border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
@@ -62,7 +62,7 @@ const Navbar = () => {
             </div>
 
             <div className="hidden lg:flex items-center space-x-4">
-              {/* Main Navigation */}
+              
               <a href="/about-us" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 About Us
               </a>
@@ -108,7 +108,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+
       {isOpen && (
         <div className="lg:hidden absolute w-full bg-white shadow-lg z-50">
           <div className="px-4 py-2 space-y-1">

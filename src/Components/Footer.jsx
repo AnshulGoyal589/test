@@ -27,13 +27,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Address Section */}
+
           <div>
             <h4 className="font-medium mb-4">Address</h4>
             <p className="text-gray-600">Dwarka Sector-3, Dwarka Delhi, 110078, India</p>
           </div>
 
-          {/* Contact Section */}
+
           <div>
             <h4 className="font-medium mb-4">Phone</h4>
             <p className="text-gray-600">9205475078</p>
@@ -43,7 +43,7 @@ const Footer = () => {
             <a href="mailto:placements@nsut.ac.in" className="text-gray-600 block hover:text-blue-600">placements@nsut.ac.in</a>
           </div>
 
-          {/* Social Media Section */}
+
           <div>
             <h4 className="font-medium mb-4">Social Media</h4>
             <p className="text-gray-600 mb-4">Follow us on social media to find out the latest information</p>
