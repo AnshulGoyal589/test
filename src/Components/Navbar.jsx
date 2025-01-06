@@ -95,7 +95,7 @@ const Navbar = () => {
               <a href="http://www.nsut.ac.in/hi/about-nsut" className="text-sm text-gray-600 hover:text-blue-600">About NSUT</a>
               <a href="http://www.nsut.ac.in/hi/photo-gallery" className="text-sm text-gray-600 hover:text-blue-600">Media</a>
               <a href="http://www.nsut.ac.in/hi/node/1265" className="text-sm text-gray-600 hover:text-blue-600">Academic Curriculum</a>
-              <Link to="/contact" className="text-sm text-gray-600 hover:text-blue-600">Alumni</Link>
+              <a href="http://www.nsut.ac.in/hi/node/335" className="text-sm text-gray-600 hover:text-blue-600">Alumni</a>
             </div>
             
             <button
