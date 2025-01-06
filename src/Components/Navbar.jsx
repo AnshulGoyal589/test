@@ -6,6 +6,10 @@ import { Link } from 'react-router-dom';
 const LoginModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
+  const handleLinkClick = (e) => {
+    onClose();
+  };
+
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-white/90 backdrop-blur-md p-8 rounded-2xl shadow-xl w-full max-w-md mx-4 border border-white/60">
@@ -17,14 +21,14 @@ const LoginModal = ({ isOpen, onClose }) => {
         </div>
         
         <div className="space-y-4 flex flex-col gap-2">
-          <Link to="https://student.tnpnsut.in/" >
+          <Link to="https://student.tnpnsut.in/" onClick={handleLinkClick}>
             <button 
               className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/20"
             >
               Student Login
             </button>
           </Link>
-          <Link to="https://admin.tnpnsut.in/" >
+          <Link to="https://admin.tnpnsut.in/" onClick={handleLinkClick}>
             <button 
               className="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition-all duration-200 shadow-lg shadow-indigo-500/20"
             >
@@ -41,9 +45,13 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
 
+  const handleNavigation = () => {
+    setShowLoginModal(false);
+    setIsOpen(false);
+  };
+
   return (
     <div className="relative">
-      
       <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white py-2">
         <div className="max-w-7xl mx-auto px-4">
           <p className="text-center text-sm font-medium">
@@ -52,31 +60,29 @@ const Navbar = () => {
         </div>
       </div>
 
-
       <nav className="bg-white shadow-lg border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <Link to="/" className="flex-shrink-0">
+              <Link to="/" onClick={handleNavigation} className="flex-shrink-0">
                 <img src={logo} alt="NSUT Logo" className="h-14 w-auto" />
               </Link>
             </div>
 
             <div className="hidden lg:flex items-center space-x-4">
-              
-              <Link to="/about-us" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              <Link to="/about-us" onClick={handleNavigation} className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 About Us
               </Link>
-              <Link to="/recruiters" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              <Link to="/recruiters" onClick={handleNavigation} className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 For Recruiters
               </Link>
-              <Link to="/stats" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              <Link to="/stats" onClick={handleNavigation} className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Placement Stats
               </Link>
-              <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              <Link to="/team" onClick={handleNavigation} className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Our Team
               </Link>
-              <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              <Link to="/contact" onClick={handleNavigation} className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Contact Us
               </Link>
             </div>
@@ -109,11 +115,10 @@ const Navbar = () => {
         </div>
       </div>
 
-
       {isOpen && (
         <div className="lg:hidden absolute w-full bg-white shadow-lg z-50">
           <div className="px-4 py-2 space-y-1">
-            <Link to="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <Link to="/about-us" onClick={handleNavigation} className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               About Us
             </Link>
             <a href="http://www.nsut.ac.in/hi/about-nsut" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
@@ -125,25 +130,26 @@ const Navbar = () => {
             <a href="http://www.nsut.ac.in/hi/node/1265" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Academic Curriculum
             </a>
-            <Link to="/recruiters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <Link to="/recruiters" onClick={handleNavigation} className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               For Recruiters
             </Link>
             <a href="http://www.nsut.ac.in/hi/node/335" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Alumni
             </a>
-            <Link to="/stats" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <Link to="/stats" onClick={handleNavigation} className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Placement Stats
             </Link>
-            <Link to="/team" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <Link to="/team" onClick={handleNavigation} className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Our Team
             </Link>
-            <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <Link to="/contact" onClick={handleNavigation} className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Contact Us
             </Link>
           </div>
         </div>
       )}
-       <LoginModal 
+      
+      <LoginModal 
         isOpen={showLoginModal} 
         onClose={() => setShowLoginModal(false)} 
       />
