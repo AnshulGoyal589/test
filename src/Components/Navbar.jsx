@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X, LogIn } from 'lucide-react';
 import logo from '../images/logo.png';
+import { Link } from 'react-router-dom';
 
 const LoginModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
@@ -16,20 +17,20 @@ const LoginModal = ({ isOpen, onClose }) => {
         </div>
         
         <div className="space-y-4 flex flex-col gap-2">
-          <a href="https://student.tnpnsut.in/" >
+          <Link to="https://student.tnpnsut.in/" >
             <button 
               className="w-full py-3 px-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all duration-200 shadow-lg shadow-blue-500/20"
             >
               Student Login
             </button>
-          </a>
-          <a href="https://admin.tnpnsut.in/" >
+          </Link>
+          <Link to="https://admin.tnpnsut.in/" >
             <button 
               className="w-full py-3 px-4 bg-gradient-to-r from-indigo-600 to-indigo-700 text-white rounded-lg hover:from-indigo-700 hover:to-indigo-800 transition-all duration-200 shadow-lg shadow-indigo-500/20"
             >
               Admin Login
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
@@ -56,28 +57,28 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <a href="/" className="flex-shrink-0">
+              <Link to="/" className="flex-shrink-0">
                 <img src={logo} alt="NSUT Logo" className="h-14 w-auto" />
-              </a>
+              </Link>
             </div>
 
             <div className="hidden lg:flex items-center space-x-4">
               
-              <a href="/about-us" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              <Link to="/about-us" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 About Us
-              </a>
-              <a href="/recruiters" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              </Link>
+              <Link to="/recruiters" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 For Recruiters
-              </a>
-              <a href="/stats" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              </Link>
+              <Link to="/stats" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Placement Stats
-              </a>
-              <a href="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              </Link>
+              <Link to="/team" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Our Team
-              </a>
-              <a href="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
+              </Link>
+              <Link to="/contact" className="text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                 Contact Us
-              </a>
+              </Link>
             </div>
 
             <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden p-2">
@@ -94,7 +95,7 @@ const Navbar = () => {
               <a href="http://www.nsut.ac.in/hi/about-nsut" className="text-sm text-gray-600 hover:text-blue-600">About NSUT</a>
               <a href="http://www.nsut.ac.in/hi/photo-gallery" className="text-sm text-gray-600 hover:text-blue-600">Media</a>
               <a href="http://www.nsut.ac.in/hi/node/1265" className="text-sm text-gray-600 hover:text-blue-600">Academic Curriculum</a>
-              <a href="/contact" className="text-sm text-gray-600 hover:text-blue-600">Alumni</a>
+              <Link to="/contact" className="text-sm text-gray-600 hover:text-blue-600">Alumni</Link>
             </div>
             
             <button
@@ -112,33 +113,33 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden absolute w-full bg-white shadow-lg z-50">
           <div className="px-4 py-2 space-y-1">
-            <a href="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <Link to="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               About Us
-            </a>
-            <a href="http://www.nsut.ac.in/hi/about-nsut" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="http://www.nsut.ac.in/hi/about-nsut" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               About NSUT
-            </a>
-            <a href="http://www.nsut.ac.in/hi/photo-gallery" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="http://www.nsut.ac.in/hi/photo-gallery" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Media
-            </a>
-            <a href="http://www.nsut.ac.in/hi/node/1265" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="http://www.nsut.ac.in/hi/node/1265" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Academic Curriculum
-            </a>
-            <a href="/recruiters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="/recruiters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               For Recruiters
-            </a>
-            <a href="/alumni" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="/alumni" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Alumni
-            </a>
-            <a href="/stats" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="/stats" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Placement Stats
-            </a>
-            <a href="/team" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="/team" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Our Team
-            </a>
-            <a href="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </Link>
+            <Link to="/contact" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Contact Us
-            </a>
+            </Link>
           </div>
         </div>
       )}
