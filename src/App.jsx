@@ -7,6 +7,7 @@ import ContactPage from './Pages/ContactPage'
 import About from './Pages/About'
 import Team from './Pages/Team'
 import Stats from './Pages/Stats'
+import Recruiters from './Pages/Recruiters'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/team" element={<Team/>} />
           <Route path="/about-us" element={<About/>} />
           <Route path="/stats" element={<Stats/>} />
+          <Route path="/recruiters" element={<Recruiters/>} />
         </Routes>
         <Footer/>
       </div>
