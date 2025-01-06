@@ -116,15 +116,15 @@ const Navbar = () => {
             <Link to="/about-us" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               About Us
             </Link>
-            <Link to="http://www.nsut.ac.in/hi/about-nsut" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <a href="http://www.nsut.ac.in/hi/about-nsut" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               About NSUT
-            </Link>
-            <Link to="http://www.nsut.ac.in/hi/photo-gallery" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </a>
+            <a href="http://www.nsut.ac.in/hi/photo-gallery" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Media
-            </Link>
-            <Link to="http://www.nsut.ac.in/hi/node/1265" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            </a>
+            <a href="http://www.nsut.ac.in/hi/node/1265" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Academic Curriculum
-            </Link>
+            </a>
             <Link to="/recruiters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               For Recruiters
             </Link>
