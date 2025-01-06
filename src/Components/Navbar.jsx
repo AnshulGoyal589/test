@@ -128,9 +128,9 @@ const Navbar = () => {
             <Link to="/recruiters" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               For Recruiters
             </Link>
-            <Link to="/alumni" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
+            <a href="http://www.nsut.ac.in/hi/node/335" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Alumni
-            </Link>
+            </a>
             <Link to="/stats" className="block px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50">
               Placement Stats
             </Link>
